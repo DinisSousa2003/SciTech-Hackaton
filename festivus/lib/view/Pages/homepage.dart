@@ -1,6 +1,8 @@
 import 'package:festivus/view/Widgets/party_card.dart';
 import 'package:flutter/material.dart';
 
+import '../../model/parties.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -36,7 +38,8 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              PartyCardWidget()
+              PartyCardWidget( name: party1.name, place: party1.place, startDay: party1.startDay, photo: party1.photo, startTime: party1.startTime),
+              PartyCardWidget( name: party2.name, place: party2.place, startDay: party2.startDay, photo: party2.photo, startTime: party2.startTime)
             ],
           ),
         ),
