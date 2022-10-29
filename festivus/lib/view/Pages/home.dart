@@ -1,4 +1,4 @@
-import 'package:festivus/view/party.dart';
+import 'package:festivus/view/Pages/party.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

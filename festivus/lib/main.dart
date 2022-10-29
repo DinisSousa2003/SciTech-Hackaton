@@ -1,4 +1,4 @@
-import 'package:festivus/view/home.dart';
+import 'package:festivus/view/Pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
