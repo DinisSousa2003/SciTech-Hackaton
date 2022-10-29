@@ -1,3 +1,4 @@
+import 'package:festivus/view/Pages/party.dart';
 import 'package:festivus/view/Widgets/party_card.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,13 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              PartyCardWidget( name: party1.name, place: party1.place, startDay: party1.startDay, photo: party1.photo, startTime: party1.startTime),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return PartyPage(party: party1);
+                  }));
+                },
+                child: PartyCardWidget( name: party1.name, place: party1.place, startDay: party1.startDay, photo: party1.photo, startTime: party1.startTime)),
               PartyCardWidget( name: party2.name, place: party2.place, startDay: party2.startDay, photo: party2.photo, startTime: party2.startTime)
             ],
           ),
