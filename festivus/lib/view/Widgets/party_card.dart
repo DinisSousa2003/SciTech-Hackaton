@@ -1,14 +1,43 @@
+import 'package:festivus/entities/party.dart';
 import 'package:flutter/material.dart';
 
 class PartyCardWidget extends StatefulWidget {
-  const PartyCardWidget({Key? key}) : super(key: key);
+  final String name;
+  final String place;
+  final String startTime;
+  final String startDay;
+  final String photo;
+
+  const PartyCardWidget({
+      Key? key,
+      required this.name,
+      required this.place,
+      required this.startTime,
+      required this.startDay,
+      required this.photo,
+      });
 
   @override
-  _PartyCardWidgetState createState() => _PartyCardWidgetState();
+  State<StatefulWidget> createState() => PartyCardWidgetState(
+    name: name, place: place, startTime: startTime, startDay: startDay, photo: photo
+  );
 }
 
-class _PartyCardWidgetState extends State<PartyCardWidget> {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+class PartyCardWidgetState extends State<StatefulWidget>{
+  final String name;
+  final String place;
+  final String startTime;
+  final String startDay;
+  final String photo;
+
+  PartyCardWidgetState(
+      {Key? key,
+        required this.name,
+        required this.place,
+        required this.startTime,
+        required this.startDay,
+        required this.photo,
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +58,7 @@ class _PartyCardWidgetState extends State<PartyCardWidget> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(
-                  'https://picsum.photos/seed/204/600',
+                  photo,
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 1,
                   fit: BoxFit.cover,
@@ -44,7 +73,7 @@ class _PartyCardWidgetState extends State<PartyCardWidget> {
                   padding:
                   EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
                   child: Text(
-                        'FeupCaffé',
+                        name,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'Poppins',
@@ -57,14 +86,14 @@ class _PartyCardWidgetState extends State<PartyCardWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      'AEFEUP',
+                      place,
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 20,
                       ),
                     ),
                     Text(
-                      '11h 27/10',
+                      startTime + ' ' + startDay,
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 20,
