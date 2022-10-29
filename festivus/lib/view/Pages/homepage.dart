@@ -1,6 +1,7 @@
 import 'package:festivus/view/Widgets/party_card.dart';
 import 'package:flutter/material.dart';
 
+import '../../entities/party.dart';
 import '../../model/parties.dart';
 
 class HomePage extends StatefulWidget {
@@ -37,13 +38,19 @@ class _HomePageState extends State<HomePage> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              PartyCardWidget( name: party1.name, place: party1.place, startDay: party1.startDay, photo: party1.photo, startTime: party1.startTime),
-              PartyCardWidget( name: party2.name, place: party2.place, startDay: party2.startDay, photo: party2.photo, startTime: party2.startTime)
-            ],
+            children: partyWidgetsList(),
           ),
         ),
       ),
     );
+  }
+
+  List<PartyCardWidget> partyWidgetsList(){
+    List<Party> parties = ListParties.getParties();
+    List<PartyCardWidget> widgets = [];
+    for (var party in parties){
+      widgets.add(PartyCardWidget( name: party.name, place: party.place, startDay: party.startDay, photo: party.photo, startTime: party.startTime));
+    }
+    return widgets;
   }
 }

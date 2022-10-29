@@ -1,5 +1,7 @@
+import 'package:festivus/model/parties.dart';
 import 'package:festivus/view/Pages/auth.dart';
 import 'package:flutter/material.dart';
+import 'model/users.dart';
 
 void main() {
   runApp(const MyApp());

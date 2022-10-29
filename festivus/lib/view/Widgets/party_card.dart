@@ -58,7 +58,7 @@ class PartyCardWidgetState extends State<StatefulWidget>{
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(
-                  photo,
+                    'https://picsum.photos/seed/626/600',
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 1,
                   fit: BoxFit.cover,

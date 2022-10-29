@@ -6,7 +6,7 @@ import 'package:festivus/entities/party.dart';
 
 class ListParties{
 
-  List<Party> parties = [Party('FeupCaffé', 'AEFEUP', '23:00', '04:00', '30-10-2022', 'E assim arrancamos a semana de Engenharia, não percas!', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D3584731468219764&imgrefurl=https%3A%2F%2Fm.facebook.com%2Faefeup%2Fphotos%2F%3Ftab%3Dalbum%26album_id%3D3584711884888389&tbnid=pEVmddHRWiVIxM&vet=12ahUKEwiOztuq0YX7AhUSWxoKHa3wCXcQMygBegQIARBj..i&docid=eDWc_N56X1xk7M&w=1953&h=1302&q=feupcaffe&ved=2ahUKEwiOztuq0YX7AhUSWxoKHa3wCXcQMygBegQIARBj', 0, [], []),
+  static List<Party> parties = [Party('FeupCaffé', 'AEFEUP', '23:00', '04:00', '30-10-2022', 'E assim arrancamos a semana de Engenharia, não percas!', 'https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D3584731468219764&imgrefurl=https%3A%2F%2Fm.facebook.com%2Faefeup%2Fphotos%2F%3Ftab%3Dalbum%26album_id%3D3584711884888389&tbnid=pEVmddHRWiVIxM&vet=12ahUKEwiOztuq0YX7AhUSWxoKHa3wCXcQMygBegQIARBj..i&docid=eDWc_N56X1xk7M&w=1953&h=1302&q=feupcaffe&ved=2ahUKEwiOztuq0YX7AhUSWxoKHa3wCXcQMygBegQIARBj', 0, [], []),
   Party('Rainhas da Noite', 'Via Rápida', '02:00', '06:00', '12-11-2022', 'A tua AEFCUP traz até ti a décima primeira edição das rainhassss', 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fallevents.in%2Fporto%2Fxi-rainhas-da-noite-festa-de-rece%25C3%25A7%25C3%25A3o-ao-estudante%2F200023280484431%3Fref%3Deventlist-cat&psig=AOvVaw0oDZH1Jb65153PIPLv4RgW&ust=1667140197345000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCIiHgK7ThfsCFQAAAAAdAAAAABAD', 6, [], []),
   Party('Flower Power', 'AEICBAS', '23:00', '04:00', '31-11-2022', 'Tu, que és uma flor. Esta incrível festa espera por ti. Não faltes ,)', 'https://www.google.com/url?sa=i&url=http%3A%2F%2Faeicbas.blogspot.com%2F2004%2F12%2Fflower-power.html&psig=AOvVaw0b4z_lcg6_0DMcnCgpkLgc&ust=1667141044384000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCLCr0sXWhfsCFQAAAAAdAAAAABAJ', 4, [],[]),
   Party('XXXVII FITU', 'Coliseu AGEAS Porto', '20:30', '00:30','15-10-2023', 'Os Jograis vão lá estar. E nos intervalos, tocam tunas também. É fixe','https://scontent.fopo3-2.fna.fbcdn.net/v/t39.30808-6/311319740_631826838527236_257996084127919157_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=UAqHAqhcmpgAX_9b4Fo&_nc_ht=scontent.fopo3-2.fna&oh=00_AfAg7V8xsIFhj2yhPOmZJxRVQvwY3t5VgB6rjt5d-mBf8g&oe=63629EBC',8,[],[]),
@@ -19,11 +19,11 @@ class ListParties{
   ];
 
 
-  List<Party> getParties(){
+  static List<Party> getParties(){
     return parties;
   }
 
-  void addParty(Party party){
+  static void addParty(Party party){
     parties.add(party);
   }
 
