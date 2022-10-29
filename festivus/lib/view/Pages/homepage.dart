@@ -45,12 +45,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  List<PartyCardWidget> partyWidgetsList(){
+  List<Widget> partyWidgetsList(){
     List<Party> parties = ListParties.getParties();
-    List<PartyCardWidget> widgets = [];
+    List<Widget> widgets = [];
     for (var party in parties){
       widgets.add(PartyCardWidget( name: party.name, place: party.place, startDay: party.startDay, photo: party.photo, startTime: party.startTime));
     }
-    return widgets;
+    return widgets.sublist(0, 3);
   }
 }
