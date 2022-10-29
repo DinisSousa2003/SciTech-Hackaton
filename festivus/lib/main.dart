@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
-        backgroundColor: Color(0xFF2F036C)
+        backgroundColor: Color(0xFF4E15BB)
       ),
       home: const FirstPage(),
     );
