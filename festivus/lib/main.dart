@@ -1,4 +1,4 @@
-import 'package:festivus/view/Pages/home.dart';
+import 'package:festivus/view/Pages/auth.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        backgroundColor: Color(0xFF2F036C)
       ),
       home: const FirstPage(),
     );

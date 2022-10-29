@@ -1,14 +1,13 @@
-import 'package:festivus/view/Pages/party.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class AdminPage extends StatelessWidget {
+  const AdminPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('festivus'),
+        title: Text('Admin'),
       ),
       body: Center(
         child: TextButton(
