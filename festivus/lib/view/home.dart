@@ -11,15 +11,23 @@ class FirstPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
-        child: TextButton(
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const SecondPage(title: 'SecondPage');
-            }));
-          },
-          child: const Text('Next'),
-        ),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Center(
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const SecondPage(title: 'Admin');
+                    }));
+                  },
+                  child: const Text('Next'),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
