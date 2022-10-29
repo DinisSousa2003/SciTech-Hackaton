@@ -54,7 +54,7 @@ class _PartyPageState extends State<PartyPage> {
                 child: Stack(
                   children: [
                     Image.network(
-                      party.photo,
+                      'https://picsum.photos/seed/626/600',
                       width: MediaQuery.of(context).size.width,
                       height: 300,
                       fit: BoxFit.none,
